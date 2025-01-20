@@ -11,9 +11,10 @@ public class RestControllerDemo {
 
     @GetMapping("/test")
     public Map<String, String> getTest() {
+        Date date = new Date();
 
-        System.out.println("send response: " + new Date());
+        System.out.println("send response: " + date);
 
-        return Map.of("message", "This is a test");
+        return Map.of("message", date.toString());
     }
 }
